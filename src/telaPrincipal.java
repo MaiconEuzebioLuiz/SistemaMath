@@ -53,12 +53,12 @@ public class telaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(principalPesquisa);
-        principalPesquisa.setBounds(540, 40, 210, 24);
+        principalPesquisa.setBounds(570, 50, 210, 24);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
         jLabel1.setText("Pesquisar :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(540, 20, 70, 16);
+        jLabel1.setBounds(570, 30, 70, 16);
 
         principalInserirTicket.setText("Inserir");
 

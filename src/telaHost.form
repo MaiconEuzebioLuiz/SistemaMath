@@ -38,7 +38,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
                       <Component id="ok_host" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="cancel_host" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
               </Group>
