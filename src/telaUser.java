@@ -120,9 +120,7 @@ public class telaUser extends javax.swing.JFrame {
 
     private void cancel_hostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancel_hostActionPerformed
         // TODO add your handling code here:
-        telaPrincipal principal = new telaPrincipal();//objeto instanciado
-        principal.setVisible(true);//objeto chamado com seu método e parâmetro
-        dispose();//fecha a tela anterior
+        System.exit(0);
     }//GEN-LAST:event_cancel_hostActionPerformed
 
     private void ok_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ok_userActionPerformed
