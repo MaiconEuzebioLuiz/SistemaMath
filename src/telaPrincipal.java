@@ -32,9 +32,10 @@ public class telaPrincipal extends javax.swing.JFrame {
         principalInserirTicket = new javax.swing.JMenu();
         MenuItem1Usuario = new javax.swing.JMenuItem();
         menuIncidente = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         principalEditar = new javax.swing.JMenu();
         MenuItem2Usuario = new javax.swing.JMenuItem();
-        MenuItem2Host = new javax.swing.JMenuItem();
+        MenuItemEditarHost = new javax.swing.JMenuItem();
         principalRelatorio = new javax.swing.JMenu();
         MenuItem4RelatorioUsuario = new javax.swing.JMenuItem();
         MenuItem4RelatorioIncidente = new javax.swing.JMenuItem();
@@ -42,8 +43,8 @@ public class telaPrincipal extends javax.swing.JFrame {
         MenuItem3SairUsuario = new javax.swing.JMenuItem();
         MenuItem3SairSistema = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Main Menu");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Sistema Math");
         getContentPane().setLayout(null);
 
         principalPesquisa.addActionListener(new java.awt.event.ActionListener() {
@@ -77,6 +78,14 @@ public class telaPrincipal extends javax.swing.JFrame {
         });
         principalInserirTicket.add(menuIncidente);
 
+        jMenuItem1.setText("Host");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        principalInserirTicket.add(jMenuItem1);
+
         jMenuBar1.add(principalInserirTicket);
 
         principalEditar.setText("Editar");
@@ -89,8 +98,13 @@ public class telaPrincipal extends javax.swing.JFrame {
         });
         principalEditar.add(MenuItem2Usuario);
 
-        MenuItem2Host.setText("Host");
-        principalEditar.add(MenuItem2Host);
+        MenuItemEditarHost.setText("Host");
+        MenuItemEditarHost.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemEditarHostActionPerformed(evt);
+            }
+        });
+        principalEditar.add(MenuItemEditarHost);
 
         jMenuBar1.add(principalEditar);
 
@@ -176,6 +190,17 @@ public class telaPrincipal extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_menuIncidenteActionPerformed
 
+    private void MenuItemEditarHostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemEditarHostActionPerformed
+        // TODO add your handling code here:
+        telaEditarHost editHost = new telaEditarHost();
+        editHost.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_MenuItemEditarHostActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -213,14 +238,15 @@ public class telaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem MenuItem1Usuario;
-    private javax.swing.JMenuItem MenuItem2Host;
     private javax.swing.JMenuItem MenuItem2Usuario;
     private javax.swing.JMenuItem MenuItem3SairSistema;
     private javax.swing.JMenuItem MenuItem3SairUsuario;
     private javax.swing.JMenuItem MenuItem4RelatorioIncidente;
     private javax.swing.JMenuItem MenuItem4RelatorioUsuario;
+    private javax.swing.JMenuItem MenuItemEditarHost;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem menuIncidente;
     private javax.swing.JMenu principalEditar;
     private javax.swing.JMenu principalInserirTicket;
