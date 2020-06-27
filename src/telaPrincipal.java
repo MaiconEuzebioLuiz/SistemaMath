@@ -31,8 +31,7 @@ public class telaPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         principalInserirTicket = new javax.swing.JMenu();
         MenuItem1Usuario = new javax.swing.JMenuItem();
-        MenuItem1Host = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        menuIncidente = new javax.swing.JMenuItem();
         principalEditar = new javax.swing.JMenu();
         MenuItem2Usuario = new javax.swing.JMenuItem();
         MenuItem2Host = new javax.swing.JMenuItem();
@@ -70,21 +69,13 @@ public class telaPrincipal extends javax.swing.JFrame {
         });
         principalInserirTicket.add(MenuItem1Usuario);
 
-        MenuItem1Host.setText("Host");
-        MenuItem1Host.addActionListener(new java.awt.event.ActionListener() {
+        menuIncidente.setText("Incidente");
+        menuIncidente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuItem1HostActionPerformed(evt);
+                menuIncidenteActionPerformed(evt);
             }
         });
-        principalInserirTicket.add(MenuItem1Host);
-
-        jMenuItem1.setText("Ticket");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        principalInserirTicket.add(jMenuItem1);
+        principalInserirTicket.add(menuIncidente);
 
         jMenuBar1.add(principalInserirTicket);
 
@@ -146,6 +137,9 @@ public class telaPrincipal extends javax.swing.JFrame {
 
     private void MenuItem2UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItem2UsuarioActionPerformed
         // TODO add your handling code here:
+        editarUser editar = new editarUser();
+        editar.setVisible(true);
+        dispose();
     }//GEN-LAST:event_MenuItem2UsuarioActionPerformed
 
     private void MenuItem1UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItem1UsuarioActionPerformed
@@ -166,13 +160,6 @@ public class telaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_MenuItem4RelatorioUsuarioActionPerformed
 
-    private void MenuItem1HostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItem1HostActionPerformed
-        // TODO add your handling code here:
-        telaHost host = new telaHost();
-        host.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_MenuItem1HostActionPerformed
-
     private void principalPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_principalPesquisaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_principalPesquisaActionPerformed
@@ -182,12 +169,12 @@ public class telaPrincipal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_MenuItem3SairSistemaActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void menuIncidenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuIncidenteActionPerformed
         // TODO add your handling code here:
-        telaTicket ticket = new telaTicket();
-        ticket.setVisible(true);
+        telaIncidente incidente = new telaIncidente();
+        incidente.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_menuIncidenteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,7 +212,6 @@ public class telaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem MenuItem1Host;
     private javax.swing.JMenuItem MenuItem1Usuario;
     private javax.swing.JMenuItem MenuItem2Host;
     private javax.swing.JMenuItem MenuItem2Usuario;
@@ -235,7 +221,7 @@ public class telaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuItem4RelatorioUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem menuIncidente;
     private javax.swing.JMenu principalEditar;
     private javax.swing.JMenu principalInserirTicket;
     private javax.swing.JTextField principalPesquisa;
