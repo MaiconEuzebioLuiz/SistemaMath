@@ -29,21 +29,15 @@ public class telaUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        senha_user = new javax.swing.JTextField();
         nome_user = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         ok_user = new javax.swing.JButton();
         cancel_host = new javax.swing.JButton();
+        senha_user = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Usuário");
-
-        senha_user.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senha_userActionPerformed(evt);
-            }
-        });
 
         nome_user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,22 +63,27 @@ public class telaUser extends javax.swing.JFrame {
             }
         });
 
+        senha_user.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                senha_userActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(130, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1)
-                    .addComponent(nome_user, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(ok_user, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cancel_host, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(senha_user, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(nome_user)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(ok_user, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(cancel_host, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(senha_user))
                 .addContainerGap(130, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -96,9 +95,9 @@ public class telaUser extends javax.swing.JFrame {
                 .addComponent(nome_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(senha_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ok_user)
                     .addComponent(cancel_host))
@@ -108,10 +107,6 @@ public class telaUser extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(514, 286));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void senha_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senha_userActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_senha_userActionPerformed
 
     private void nome_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome_userActionPerformed
         // TODO add your handling code here:
@@ -132,6 +127,10 @@ public class telaUser extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane,"Senha ou usuário inválidos");//comando para exibir popup na tela com a msg desejada
         }
     }//GEN-LAST:event_ok_userActionPerformed
+
+    private void senha_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senha_userActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senha_userActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,6 +173,6 @@ public class telaUser extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField nome_user;
     private javax.swing.JButton ok_user;
-    private javax.swing.JTextField senha_user;
+    private javax.swing.JPasswordField senha_user;
     // End of variables declaration//GEN-END:variables
 }

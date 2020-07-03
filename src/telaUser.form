@@ -28,18 +28,16 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace pref="130" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="nome_user" min="-2" pref="238" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="ok_user" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="cancel_host" min="-2" pref="100" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="senha_user" min="-2" pref="238" max="-2" attributes="0"/>
+                  <Component id="nome_user" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ok_user" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="cancel_host" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="senha_user" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="130" max="32767" attributes="0"/>
           </Group>
@@ -54,9 +52,9 @@
               <Component id="nome_user" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="senha_user" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="ok_user" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cancel_host" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -67,11 +65,6 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="senha_user">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="senha_userActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JTextField" name="nome_user">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nome_userActionPerformed"/>
@@ -101,6 +94,11 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancel_hostActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="senha_user">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="senha_userActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
