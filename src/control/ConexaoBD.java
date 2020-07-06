@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  *
  * @author maicon
  */
-public class conection {
+public class ConexaoBD { // MÉTODO RESPONSÁVEL POR CONECTAR COM A BASE DE DADOS. CHAMADO NA CLASSE PRINCIPAL.
     public Statement stm;//devem ser acessadas de outros lugares do software--- realiza pesquisa no BD.
     public ResultSet rs;//--- armazena resultado da pesquisa.
     private String driver = "org.postgresql.Driver";//devem ser acessadas somente nesta classe--- identifica o serviço de BD
@@ -25,9 +25,15 @@ public class conection {
             con = DriverManager.getConnection(caminho, usuario, senha);
             JOptionPane.showMessageDialog(null, "Connection OK");
         } catch (SQLException ex) {
-            Logger.getLogger(conection.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConexaoBD.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Connection ERROR");
         }
     }
-    
+    public void desconecta(){try {//metodo para desconectar.
+        con.close();
+        JOptionPane.showMessageDialog(null,"Banco de dados desconectado com sucesso");
+        } catch (SQLException ex) {
+           JOptionPane.showMessageDialog(null,"Erro ao desconectar o Banco de dados");
+        }
+    }
 }

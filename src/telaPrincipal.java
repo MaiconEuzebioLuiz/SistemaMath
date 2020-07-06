@@ -1,3 +1,6 @@
+
+import control.ConexaoBD;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +12,13 @@
  * @author maicon
  */
 public class telaPrincipal extends javax.swing.JFrame {
-
+     ConexaoBD conecta = new ConexaoBD();
     /**
      * Creates new form telaPrincipal
      */
     public telaPrincipal() {
         initComponents();
+        conecta.conexao();
     }
 
     /**
@@ -180,6 +184,7 @@ public class telaPrincipal extends javax.swing.JFrame {
 
     private void MenuItem3SairSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItem3SairSistemaActionPerformed
         // TODO add your handling code here:
+        conecta.desconecta();
         System.exit(0);
     }//GEN-LAST:event_MenuItem3SairSistemaActionPerformed
 
@@ -199,6 +204,10 @@ public class telaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
+        telaHost host = new telaHost();
+        host.setVisible(true);
+        dispose();
+                
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
